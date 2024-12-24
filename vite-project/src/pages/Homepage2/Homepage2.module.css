@@ -1,0 +1,49 @@
+.container {
+    margin-left: 52px;
+}
+
+.miniContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.select {
+    width: 374px;
+    height: 48px;
+    /* margin-bottom: 20px; */
+}
+
+.input {
+    width: 155px;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+.insideValues {
+    display: flex;
+}
+
+.insideValues label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.insideValues input {
+    margin-right: 16px;
+}
+
+.h1 {
+    font-size: 50px;
+    margin: 0px;
+    margin-top: 52px;
+    /* margin-left: 52px; */
+    margin-bottom: 25px;
+}
