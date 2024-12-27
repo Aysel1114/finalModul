@@ -8,13 +8,25 @@ export default function Description() {
     const navigate = useNavigate();
     const {id} = useParams();
     const [coin, setCoin] = useState(null);
-    const allCoins = useSelector((state) => state.coin.filtered);
+    const allCoins = useSelector((state) => state.coin.coins);
     console.log("allCoins", allCoins);
 
     useEffect(() => {
-        const selectedCoin = allCoins.find((coin) => String(coin.id) === id);
-        setCoin(selectedCoin);
-        console.log("SelectedCoin", selectedCoin);
+        if(!id) {
+            console.log("id doens't exists");
+        }
+        else {
+            const selectedCoin = allCoins.find((coin) => String(coin.coin_id) === id);
+            allCoins.find((coin) => {
+                console.log("coin_id = " + coin.coin_id);
+            })
+            if (selectedCoin) {
+                setCoin(selectedCoin);
+                console.log("SelectedCoin", selectedCoin);
+            } else {
+                console.log("Coin not found for the given ID");
+            }
+        }
     }, [id, allCoins]);
 
     if (!coin) {
@@ -23,6 +35,10 @@ export default function Description() {
 
     const handleNavigate = () => {
         navigate('/listOfCoins');
+    }
+
+    const handleNavigate2 = () => {
+        navigate('/adminPanel1');
     }
 
 
@@ -38,41 +54,38 @@ export default function Description() {
             <p className={css.description}>{coin.obverseDetails}</p>
             <p className={css.description}>{coin.reverseDetails}</p>
             <table className={css.table}>
-                <tr>
-                    <td>Issuing Country</td>
-                    <td>{coin.issuingCountry} </td>
-                </tr>
-                <tr>
-                    <td>Composition</td>
-                    <td>{coin.composition}</td>
-                </tr>
-                <tr>
-                    <td>Quality</td>
-                    <td>{coin.quality}</td>
-                </tr>
-                <tr>
-                    <td>Denomination</td>
-                    <td>{coin.denomination}</td>
-                </tr>
-                <tr>
-                    <td>Yaer</td>
-                    <td>{coin.year}</td>
-                </tr>
-                <tr>
-                    <td>Weight</td>
-                    <td>{coin.weight}</td>
-                </tr>
-                <tr>
-                    <td>Price</td>
-                    <td>{coin.price}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>Issuing Country</td>
+                        <td>{coin.issuingCountry}</td>
+                    </tr>
+                    <tr>
+                        <td>Composition</td>
+                        <td>{coin.composition}</td>
+                    </tr>
+                    <tr>
+                        <td>Quality</td>
+                        <td>{coin.quality}</td>
+                    </tr>
+                    <tr>
+                        <td>Denomination</td>
+                        <td>{coin.denomination}</td>
+                    </tr>
+                    <tr>
+                        <td>Year</td>
+                        <td>{coin.year}</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>{coin.weight}</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>{coin.price}</td>
+                    </tr>
+                </tbody>
             </table>
             <p className={css.router} onClick={handleNavigate}>Back to the list</p>
-            {/* <p>{coin.country}</p>
-            <p>{coin.composition}</p>
-            <p>{coin.quality}</p>
-            <p>{coin.price}</p>
-            <p>{coin.year}</p> */}
         </div>
     </div>
   )

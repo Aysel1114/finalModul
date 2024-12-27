@@ -26,7 +26,6 @@
 
 label {
     display: flex;
-    
 }
 
 .filter {
@@ -81,4 +80,159 @@ label {
 
 .coinDescription {
     margin-top: 5px;
+    height: 80px;
+    overflow: auto;
 }
+
+.coinList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+}
+
+.coinItem {
+    display: flex;
+    height: calc(33.333% - 30px);
+    margin-top: 20px;
+}
+
+span {
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+.filters {
+    display: flex;
+    cursor: pointer;
+}
+
+.filter {
+    text-decoration: underline;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-left: 20px;
+        margin-top: 30px;
+        padding-right: 20px;
+    }
+
+    .h1 {
+        font-size: 36px;
+        line-height: 1.2; 
+        margin-bottom: 15px;
+    }
+
+    .input {
+        width: 100%;
+        margin-right: 0;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .searchBtn {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+        font-size: 16px; 
+        border-radius: 5px;
+    }
+
+    .filters {
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: flex-start; 
+    }
+
+    .coinList {
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .coinItem {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .coinImage {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 10px;
+    }
+
+    .coinInfo {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .coinName {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: #833AE0;
+    }
+
+    .coinDescription {
+        margin-top: 5px;
+        height: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .h1 {
+        font-size: 28px;
+    }
+
+    .input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .searchBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .filters {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .coinList {
+        justify-content: center;
+    }
+
+    .coinItem {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .coinImage {
+        width: 90px;
+        height: 90px;
+    }
+
+    .coinInfo {
+        width: 100%;
+    }
+
+    .coinDescription {
+        height: 60px;
+    }
+}
+

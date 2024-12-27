@@ -11,6 +11,10 @@ import ListofCoins from './pages/ListofCoins/ListofCoins'
 import { Provider } from 'react-redux'
 import { store } from './app/store'
 import Description from './pages/Description/Description'
+import AdminPanelSignIn from './pages/AdminPanelSignIn/AdminPanelSignIn'
+import AdminPanel1 from './pages/AdminPanel1/AdminPanel1'
+import AdminPanel2 from './pages/AdminPanel2/AdminPanel2'
+import AdminPanelEdit from './pages/AdminPanelEdit/AdminPanelEdit'
 
 function App() {
 
@@ -23,6 +27,11 @@ function App() {
           <Route path='/adminPanel' element={<AdminPanelLogin />}/>
           <Route path='/listOfCoins' element={<ListofCoins />}/>
           <Route path='/description/:id' element={<Description />}/>
+          <Route path='/adminPanelSignIn' element={<AdminPanelSignIn />}/>
+          <Route path='/adminPanelLogin' element={<AdminPanelLogin />}/>
+          <Route path='/adminPanel1' element={<AdminPanel1 />}/>
+          <Route path='/adminPanel2' element={<AdminPanel2 />}/>
+          <Route path='/adminPanelEdit/:coin_id' element={<AdminPanelEdit />}/>
         </Routes>
       </BrowserRouter>
     </Provider>

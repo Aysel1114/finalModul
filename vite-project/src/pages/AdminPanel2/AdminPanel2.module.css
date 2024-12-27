@@ -1,0 +1,118 @@
+.container {
+    margin-top: 52px;
+    margin-left: 52px;
+}
+
+.h1 {
+    font-size: 50px;
+    font-weight: 300;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+
+.miniContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.label2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 374px;
+    height: 48px;
+    margin-top: 3px;
+}
+
+.textarea {
+    width: 374px;
+    height: 136px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button {
+    width: 120px;
+    height: 48px;
+    border: none;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.button:first-child {
+    background-color: #833AE0;
+    color: white
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.label:last-child {
+    margin-bottom: 0px;
+}
+
+.message {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .container {
+      margin-top: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+  
+    .miniContainer {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .input, 
+    .textarea {
+      width: 100%;
+      font-size: 16px;
+    }
+  
+    .label, 
+    .label2 {
+      margin-bottom: 15px;
+    }
+  
+    .info {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .button {
+      width: 100%;
+      height: 44px;
+    }
+  }
+  
+  

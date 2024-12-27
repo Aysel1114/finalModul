@@ -1,17 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 48px;
+    align-items: flex-start; 
+}
+
 .images {
     width: 300px;
     height: 300px;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    transition: all 0.3s ease-in-out;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    gap: 30px;
-    margin-top: 48px;
+.img {
+    width: 214px;
+    height: 214px;
+    transition: width 0.3s ease, height 0.3s ease; 
 }
 
 .info {
@@ -20,18 +27,16 @@
     height: 624px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     padding-left: 43px;
     padding-right: 43px;
     box-sizing: border-box;
+    flex-shrink: 0; 
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-    width: 366px;
     margin-top: 28px;
     font-size: 10px;
 }
@@ -62,3 +67,87 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info {
+        width: 100%;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .images {
+        width: 80%;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .img {
+        width: 180px;
+        height: 180px; 
+    }
+
+    .table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .router {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .info {
+        width: 100%;
+        height: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .images {
+        width: 90%;
+        margin: 0 auto;
+        gap: 15px;
+    }
+
+    .img {
+        width: 160px;
+        height: 160px; 
+    }
+
+    .table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .router {
+        font-size: 14px;
+    }
+} */

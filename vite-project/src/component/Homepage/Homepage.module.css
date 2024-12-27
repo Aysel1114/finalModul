@@ -20,14 +20,7 @@ label {
 .filter {
     text-decoration: underline;
     margin-right: 5px;
-    /* margin-bottom: 60px; */
 }
-
-/* .h1 {
-    font-size: 50px;
-    margin: 0px;
-    margin-bottom: 25px
-} */
 
 .input {
     width: 374px;
@@ -44,11 +37,6 @@ label {
     color: white;
     font-size: 14px;
     cursor: pointer;
-}
-
-.container {
-    /* margin-left: 52px; */
-    /* margin-top: 52px; */
 }
 
 .filters {
