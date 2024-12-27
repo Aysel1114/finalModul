@@ -36,13 +36,6 @@ function App() {
       </BrowserRouter>
     </Provider>
   );
-
-  // return (
-  //   <div>
-  //     {/* <Homepage1/> */}
-  //     <Homepage2/>
-  //   </div>
-  // )
 }
 
 export default App
